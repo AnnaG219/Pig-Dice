@@ -4,6 +4,8 @@ var player2 = new Player ("Mariia");
 var player1Turn = true;
 var randomNumber;
 var score = 0;
+var name1 = $("input#username1").val();
+var name2 = $("input#username2").val();
 
 
 
@@ -31,22 +33,24 @@ function passTurn () {
     player1.score += score; //This adds the die score to the Player's constructor score
     player1Turn =! player1Turn; //Saying this is "not" Player1's turn, so "true" turns to "false"
     winner();
-    alert("Player2, it's your turn!");
+    $("#current-player").text($("input#username1").val());
+      $("#current-player").show();
   }
   else {
   player1Turn =! player1Turn; //signifies player2turn (player1Turn = "false")
     player2.score += score;
     winner();
-    alert("Player1, it's your turn!");
+    $("#current-player").text($("input#username2").val());
+      $("#current-player").show();
   }
 };
 
 function winner() {
-  if (player1.score > 10) {
+  if (player1.score > 100) {
     $("#image1").attr("src","img/winner.jpg");
     $("#pig-dice").slideUp();
   }
-  else if (player2.score > 10) {
+  else if (player2.score > 100) {
     $("#image1").attr("src","img/winner.jpg");
       $("#pig-dice").slideUp();
   }
@@ -77,12 +81,21 @@ $(document).ready(function() {
 
 
     $(".names").slideUp();
-    $("#pig-dice").slideDown();
+    $("#levels").slideDown();
+    $("#pig-dice").slideUp();
     var name1 = $("input#username1").val();
     var name2 = $("input#username2").val();
     $("#player-one").text(name1);
     $("#player-one").show(name1);
     $("#player-two").text(name2);
     $("#player-two").show(name2);
+
+
+  });
+
+  $("#easy").click(function(){
+      $("#levels").slideUp();
+    $("#pig-dice").slideDown();
+
   });
 });
