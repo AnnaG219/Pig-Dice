@@ -4,10 +4,17 @@
 #### By _**Mariia Stashuk and Anna Gibbons**_
 
 ## Description
+<<<<<<< HEAD
 ![Alt text](/img/print3.png)
 ![Alt text](/img/print1.png)
 ![Alt text](/img/print2.png)
 
+=======
+
+![Alt text](/img/print1.png)
+![Alt text](/img/print2.png)
+![Alt text](/img/print3.png)
+>>>>>>> 81d4278c9425b9970e93250134ee599c14b4f139
 
 
 
