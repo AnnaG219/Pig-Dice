@@ -4,7 +4,10 @@
 #### By _**Mariia Stashuk and Anna Gibbons**_
 
 ## Description
-(img/print1.png)
+![Alt text](/img/print3.png)
+![Alt text](/img/print1.png)
+![Alt text](/img/print2.png)
+
 
 
 
